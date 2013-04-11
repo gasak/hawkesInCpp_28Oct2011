@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7381BB83141D94CF001E3F7D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7381BB82141D94CF001E3F7D /* main.cpp */; };
 		7381BB85141D94CF001E3F7D /* hawkesInCpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7381BB84141D94CF001E3F7D /* hawkesInCpp.1 */; };
+		7381BBA9141D9CEF001E3F7D /* SubSpikeStruct.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7381BBA8141D9CEF001E3F7D /* SubSpikeStruct.cpp */; };
+		73EF4FDA141EA3290032EA0C /* Hawkes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73EF4FD9141EA3290032EA0C /* Hawkes.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +28,17 @@
 
 /* Begin PBXFileReference section */
 		7381BB7E141D94CF001E3F7D /* hawkesInCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hawkesInCpp; sourceTree = BUILT_PRODUCTS_DIR; };
-		7381BB82141D94CF001E3F7D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		7381BB84141D94CF001E3F7D /* hawkesInCpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = hawkesInCpp.1; sourceTree = "<group>"; };
+		7381BB82141D94CF001E3F7D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = hawkesInCpp/main.cpp; sourceTree = "<group>"; };
+		7381BB84141D94CF001E3F7D /* hawkesInCpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; name = hawkesInCpp.1; path = hawkesInCpp/hawkesInCpp.1; sourceTree = "<group>"; };
+		7381BB8B141D9529001E3F7D /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = hawkesInCpp/Matrix.h; sourceTree = "<group>"; };
+		7381BB94141D97A2001E3F7D /* csvManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = csvManagement.h; sourceTree = "<group>"; };
+		7381BBA6141D9CBC001E3F7D /* SubSpikeStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubSpikeStruct.h; sourceTree = "<group>"; };
+		7381BBA8141D9CEF001E3F7D /* SubSpikeStruct.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SubSpikeStruct.cpp; sourceTree = "<group>"; };
+		73C39B621433CEE800EC204C /* OptimFn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptimFn.h; sourceTree = "<group>"; };
+		73CC73E0142FF693006AD077 /* MyVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVector.h; sourceTree = "<group>"; };
+		73D456191431884600F09721 /* Optimizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Optimizer.h; sourceTree = "<group>"; };
+		73EF4FD8141EA31C0032EA0C /* Hawkes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hawkes.h; sourceTree = "<group>"; };
+		73EF4FD9141EA3290032EA0C /* Hawkes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hawkes.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,10 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		732E23C01427E1BA0081A0CE /* DataManagement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataManagement;
+			sourceTree = "<group>";
+		};
+		732E23C21427E1EE0081A0CE /* HawkesFunctionalities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = HawkesFunctionalities;
+			sourceTree = "<group>";
+		};
 		7381BB73141D94CF001E3F7D = {
 			isa = PBXGroup;
 			children = (
-				7381BB81141D94CF001E3F7D /* hawkesInCpp */,
+				7381BBA0141D99D6001E3F7D /* hawkesInCpp */,
 				7381BB7F141D94CF001E3F7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,13 +82,41 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7381BB81141D94CF001E3F7D /* hawkesInCpp */ = {
+		7381BB9E141D98DA001E3F7D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7381BBA6141D9CBC001E3F7D /* SubSpikeStruct.h */,
+				7381BBA8141D9CEF001E3F7D /* SubSpikeStruct.cpp */,
+			);
+			name = Data;
+			path = hawkesInCpp;
+			sourceTree = "<group>";
+		};
+		7381BBA0141D99D6001E3F7D /* hawkesInCpp */ = {
 			isa = PBXGroup;
 			children = (
 				7381BB82141D94CF001E3F7D /* main.cpp */,
 				7381BB84141D94CF001E3F7D /* hawkesInCpp.1 */,
+				732E23C21427E1EE0081A0CE /* HawkesFunctionalities */,
+				73EF4FD8141EA31C0032EA0C /* Hawkes.h */,
+				73EF4FD9141EA3290032EA0C /* Hawkes.cpp */,
+				732E23C01427E1BA0081A0CE /* DataManagement */,
+				7381BB94141D97A2001E3F7D /* csvManagement.h */,
+				7381BBA1141D9A1E001E3F7D /* helper */,
+				7381BB9E141D98DA001E3F7D /* Data */,
+				73D456191431884600F09721 /* Optimizer.h */,
+				73C39B621433CEE800EC204C /* OptimFn.h */,
 			);
-			path = hawkesInCpp;
+			name = hawkesInCpp;
+			sourceTree = "<group>";
+		};
+		7381BBA1141D9A1E001E3F7D /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				7381BB8B141D9529001E3F7D /* Matrix.h */,
+				73CC73E0142FF693006AD077 /* MyVector.h */,
+			);
+			name = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7381BB83141D94CF001E3F7D /* main.cpp in Sources */,
+				7381BBA9141D9CEF001E3F7D /* SubSpikeStruct.cpp in Sources */,
+				73EF4FDA141EA3290032EA0C /* Hawkes.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +256,7 @@
 				7381BB8A141D94CF001E3F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
